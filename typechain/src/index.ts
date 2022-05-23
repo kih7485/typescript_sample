@@ -1,3 +1,6 @@
+import {init, exit} from "./myPackage"
+
+init()
 class Block {
     constructor(private data: string) {
         

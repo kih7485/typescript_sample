@@ -3,6 +3,8 @@
     "compilerOptions": {
         "outDir":"build",
         "target": "ES3",
-        "lib": ["DOM","ES6"]
+        "lib": ["DOM","ES6"],
+        "strict": true,
+        "allowJs": true
     }
 }

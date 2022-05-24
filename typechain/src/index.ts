@@ -1,11 +1,19 @@
-import {init, exit} from "./myPackage"
+interface BlockShape{
+    prevHash: string,
+    height: number,
+    data: string
+}
 
-init()
-class Block {
-    constructor(private data: string) {
-        
+class Block implements BlockShape {
+    public hash: string;
+    constructor(
+        public prevhash: string,
+        public height: number,
+        public data: string
+    ) {
+        this.hash = Block.calculateHash(prevhash, height, data);
     }
-    static hello() {
-        return "hi"
+    static calculateHash(prevhash:string, height:number, data:string) {
+        
     }
 }
